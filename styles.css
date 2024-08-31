@@ -1,5 +1,5 @@
 h1{
-    color: #5453A6;
+    color: white;
     text-align: center;
     font-size: 70px;
 }
@@ -9,11 +9,20 @@ h2{
     text-align: center;
     font-size: 30px;
     margin-bottom: 50px;
+    font-family: helvetica;
+}
+
+h3{
+    color: #5453A6;
+    text-align: left;
+    font-size: 30px;
+    font-style: bold;
+    font-family: helvetica;
 }
 
 p{
     color: #5453A6;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 50px;
@@ -21,9 +30,10 @@ p{
     margin-right: 30px;
 }
 
-a{
+.button{
     color: white;
-    font-size: 20px;
+    font-family: helvetica;
+    font-size: 18px;
     background-color: #9C90FE;
     padding-top: 15px;
     padding-right: 35px;
@@ -31,11 +41,17 @@ a{
     padding-left: 35px;
 }
 
+.button:hover{
+    background-color:#6D69FE;
+}
+
 body{
     background-size: cover;
     background-image: url('background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -57,4 +73,47 @@ body{
     margin-right: auto;
     
 }
+.logo{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
 
+a img{
+    border: 0;
+   
+}
+
+.profile{
+    float:left;
+    border: thick double #5453A6;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+header {
+    background-color: #5453A6;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+nav a:hover {
+    background-color: #575757;
+}
+.container {
+    padding: 20px;
+}
