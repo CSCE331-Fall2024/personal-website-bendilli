@@ -3,8 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI-Generated Page</title>
-    <link rel = "stylesheet" href = "styles.css">
+    <title>Simple Contact Page with Sidebar and Prompts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: white; /* Updated main text color */
+        }
+        header {
+            background-color: #5453A6;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            margin-top: 50px; /* Adjust for header height */
+            position: fixed; /* Ensure it stays fixed */
+            top: 50px; /* Below the header */
+            width: 100%;
+            z-index: 999; /* Ensure it stays below the header but above content */
+        }
+        nav a {
+            color: #9C90FE; /* Updated navigation link color */
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #6D69FE; /* Updated hover color */
+            color: white; /* Ensure text is readable on hover */
+        }
+        .main-container {
+            display: flex;
+            margin-top: 120px; /* Adjust to ensure it doesn't overlap with fixed header and nav */
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: fixed; /* Fix sidebar on the left side */
+            top: 120px; /* Below the header and nav */
+            bottom: 0; /* Stretch to bottom */
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #5453A6; /* Sidebar link color */
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .container {
+            flex: 1;
+            max-width: 800px;
+            margin-left: 220px; /* Offset for sidebar width */
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 240px; /* Additional margin to ensure content is not covered */
+        }
+        h1{
+            text-align: center;
+            color: white;
+        }
+
+        h2{
+            text-align: center;
+            color: #5453A6; /* Updated heading color */
+        }
+        .prompt-box {
+            background-color: #e0f7fa; /* Light blue background for prompts */
+            border: 1px solid #b2ebf2; /* Border color */
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #00796b; /* Text color for prompts */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #5453A6; /* Updated label color */
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #6D69FE;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,27 +138,47 @@
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="qualifications.html">Qualifications</a>
-        <a href="services.html">Service</a>
+        <a href="services.html">Services</a>
         <a href="ai-gen.html">Contact</a>
     </nav>
+    <div class="main-container">
+        <div class="sidebar">
+            <a href="mailto:judy8liu@gmail.com" target = "_blank">My Email</a>
+            <a href="sms:+18327096215" target = "_blank">Text Me</a>
+            <a href="https://www.linkedin.com/in/judy-liu-03945a219/" target = "_blank">My LinkedIn</a>
+            <a href="https://bendilli.carrd.co" target = "_blank">My Carrd</a>
+        </div>
+        <div class="container">
+            <h2>Contact Me</h2>
+            <h2>**Please note that the submit button does not actually send an email... yet.**</h2>
+            <div class="prompt-box">
+                <h3>Did you know that this page was designed via <a href = "https://chatgpt.com/">ChatGPT</a>?</h3>
+                <p>Here are the prompts that were used:</p>
+                <ul>
+                    <li><strong>Design a website in HTML with a header and navigation bar with 5 buttons:</strong> Basic website layout with header and navigation.</li>
+                    <li><strong>Add a sidebar with 4 links in it:</strong> Incorporate a sidebar into the website with navigation links.</li>
+                    <li><strong>Create a contact me page:</strong> Design a contact form page for user communication.</li>
+                    <li><strong>Put in a text box that contains all of my ChatGPT prompts.</strong> Add a text box to display prompts in the contact page.</li>
+                    <li><strong>Add a little margin on the left side of the contact portion, it is getting a little covered by the sidebar:</strong> Add a margin to the left of the contact portion.</li>
+                    <li><strong>Use white for the header text, #5453A6 for the main text, and #6D69FE for hovering over the buttons:</strong> Change color scheme of the text.</li>
+                </ul>
+            </div>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
 
-    <div class="sidebar">
-        <h2>Contact Me!</h2>
-        <a href="mailto:judy8liu@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/judy-liu-03945a219/" target="_blank">LinkedIn</a>
-        <a href="https://bendilli.carrd.co" target="_blank">Carrd</a>
-        <a href="#link4">Link 4</a>
-        <a href="#link5">Link 5</a>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
-
-    <div class="container">
-        <h3>Did you know that this page was AI-Generated? Here are the prompts!</h3>
-        <ul>
-            <li>design me a website in html with a header and a navigation bar with 5 buttons.</li>
-            <li>Now add a sidebar to it.</li>
-        </ul>
-    </div>
-
-
 </body>
 </html>

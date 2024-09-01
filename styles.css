@@ -35,21 +35,6 @@ th{
     font-style: normal;
 }
 
-.button{
-    color: white;
-    font-family: helvetica;
-    font-size: 18px;
-    background-color: #9C90FE;
-    padding-top: 15px;
-    padding-right: 35px;
-    padding-bottom: 15px;
-    padding-left: 35px;
-}
-
-.button:hover{
-    background-color:#6D69FE;
-}
-
 body{
     background-size: cover;
     background-image: url('background.png');
@@ -159,7 +144,7 @@ nav a:hover {
     background-color:#6D69FE;
 }
 
-/* Chat GPT did sidebar stuff*/
+/* Chat GPT did everything under this comment to do the contact page.*/
 .sidebar {
     height: 100vh; /* Full height of the viewport */
     width: 250px; /* Width of the sidebar */
@@ -172,12 +157,13 @@ nav a:hover {
 .sidebar a {
     display: block;
     padding: 10px;
-    color: #333;
+    color: #1E90FF;
     text-decoration: none;
-    font-family: helvetica;
+    font-family: "times new roman";
 }
 .sidebar a:hover {
     background-color: #ddd;
+    color: #333
 }
 
 li{
