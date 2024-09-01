@@ -94,6 +94,10 @@ a img{
    
 }
 
+td{
+    width: 350px;
+}
+
 .profile{
     float: left;
     border: thick double #5453A6;
