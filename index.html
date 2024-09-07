@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Judy Liu</title>
-    <link rel = "stylesheet" href = "styles.css">
+    <script type = "text/javascript" src = "sunmode.js"></script>
+    <link id = "curTheme" rel = "stylesheet" href = "styles.css">
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -14,24 +22,28 @@
 
             <!-- Top banner that has my name and a little description -->
             <section class="top-banner">
-                <a class="logo" href = "index.html"><img class = "logo_image"; src = "judy-liu.png"></a>
-                <h2>Computer Science Major at Texas A&M</h2>
+                <button id = "switchButton" onclick = toggleTheme()>
+
+                </button>
+                <a class = "logo" href = "index.html"><img id = "logo_image"; src = "judy-liu.png"></a>
+                <h2 id = "desc">Computer Science Major at Texas A&M</h2>
             </section>
 
-            <!-- My logo at the top -->
-            <nav>
-                <a href ="index.html">Home</a>
-                <a href ="portfolio.html">Portfolio</a>
-                <a href ="qualifications.html">Qualifications</a>
-                <a href ="services.html">Service</a>
-                <a href ="ai-gen.html">Contact</a>
-                
-            </nav>
-<p></p>
-
             <!-- Main body -->
-            <section class = "main-body">
-                <img class = "profile" src="profile.jpg">
+            <div class = "main-body">
+                <!-- My logo at the top -->
+                <nav>
+                    <a href ="index.html">Home</a>
+                    <a href ="portfolio.html">Portfolio</a>
+                    <a href ="qualifications.html">Qualifications</a>
+                    <a href ="services.html">Service</a>
+                    <a href ="ai-gen.html">Contact</a>
+                    
+                </nav>
+
+                <p></p>
+
+                <img id = "profile" src="profile.jpg">
                 <br>
                 <h3>The face behind the website:</h3>
                 <p>
@@ -68,7 +80,7 @@
                     I have done, and a page where you can reach out to me should you have any questions, comments, or concerns! Thank
                     you for taking a look at my website and I hope to hear more from you soon!
                 </p>
-            </section>
+            </div>
         </div>
 
     </div>

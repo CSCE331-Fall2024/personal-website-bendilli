@@ -5,22 +5,23 @@ h1{
 }
 
 h2{
-    color: #5453A6;
+    color: #E46AD9;
     text-align: center;
     font-size: 30px;
-    font-family: helvetica;
+    font-family: barlow;
 }
 
 h3{
-    color: #5453A6;
+    color: #fae373;
     text-align: left;
     font-size: 30px;
     font-style: bold;
     font-family: helvetica;
+    margin-left: 30px;
 }
 
 p{
-    color: #5453A6;
+    color: #fae373;
     font-style: bold;
     font-family: helvetica;
     text-align: left;
@@ -33,7 +34,7 @@ p{
 
 body{
     background-size: cover;
-    background-image: url('background.png');
+    background-image: url('sun_bg.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
@@ -42,8 +43,8 @@ body{
 }
 
 #switchButton{
-    background-color: #9C90FE;
-    border: solid #5453A6;
+    background-color: #FA7D;
+    border: solid #fae373;
     border-width: 5px;
     padding: 20px;
     border-radius: 100%;
@@ -52,35 +53,35 @@ body{
     right: 50px;
 }
 #switchButton:hover {
-    background-color: #6D69FE;
-}
-
-.logo{
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    
+    background-color: #F77BEB;
 }
 
 #logo_image{
-    width: 800px;
-    height: auto;
+    width: 400px;
+    height: 250px;
+    position: fixed;
+    right: 75px;
+    border: dotted #fae373;
+    border-width: 5px;
 }
 
-.page{
-    height: 100%;
-    width: 800px;
-    text-align: center;
-    background-color: #F2F2FE;
-    border:30px solid #5453A6;
-    margin-left: auto;
-    margin-right: auto;
-    
+#desc{
+    width: 400px;
+    height: 250px;
+    position: fixed;
+    top: 250px;
+    right: 75px;
 }
-.logo{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-right: 0px;
+
+.top-banner{
+    float: right;
+}
+
+.main-body{
+    height: 100%;
+    width: 975px;
+    text-align: center;
+    background-color: #FA7D6B;
     margin-left: 0px;
 }
 
@@ -94,10 +95,11 @@ td{
 }
 
 #profile{
-    float: left;
-    border: thick double #5453A6;
-    height: 50%;
-    width: 50%;
+    float: right;
+    border: solid #fae373;
+    border-width: 5px;
+    height: 300px;
+    width: 300px;
     margin-bottom: 15px;
     margin-right: 15px;
     margin-left: 15px;
@@ -141,7 +143,7 @@ nav {
     color: white;
     font-family: helvetica;
     font-size: 18px;
-    background-color: #9C90FE;
+    background-color: #886293;
 }
 nav a {
     color: white;
@@ -151,5 +153,5 @@ nav a {
     display: block;
 }
 nav a:hover {
-    background-color:#6D69FE;
+    background-color:#F77BEB;
 }
