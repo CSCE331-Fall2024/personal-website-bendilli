@@ -103,15 +103,14 @@ td{
     margin-left: 15px;
 }
 
-.column {
+.qual{
+    display: block;
     float: left;
-    width: 50%;
-  }
-  
-  .row:after {
-    display: table;
-    clear: both;
-  }
+    margin-right: 50px;
+    text-align: left;
+    font-family: helvetica;
+    color: #5453A6;
+}
 
 .resume{
     height: 800px;

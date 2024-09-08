@@ -1,4 +1,57 @@
-let curStyleSheet = localStorage.getItem('curStyleSheet');
+let currentTheme = localStorage.getItem('currentTheme');
+
+window.onload = function(){
+    const savedStylesheet = localStorage.getItem('currentTheme');
+
+    // If there is a saved stylesheet, apply it
+    if (savedStylesheet) {
+        document.getElementById('curTheme').setAttribute('href', savedStylesheet);
+        var theme = document.getElementsByTagName('link')[0];
+        if(theme.getAttribute('href') == 'styles.css'){
+            document.getElementById('logo_image').src = "judy-liu.png";
+            document.getElementById('profile').src = "profile.jpg";
+        }
+        else{
+            document.getElementById('logo_image').src = "sun_logo.png";
+            document.getElementById('profile').src = "profile2.jpg";
+        }
+    }
+}
+
+function load_style()
+{
+    page_style = localStorage.getItem("currentTheme");
+    if (page_style === null)
+    {
+   	    page_style = "styles.css";
+    }
+    document.getElementById("curTheme").setAttribute("href", page_style);
+
+    if(page_style == "styles.css"){
+        document.getElementById('logo_image').src = "judy-liu.png";
+        document.getElementById('profile').src = "profile.jpg";
+    }
+    else{
+        document.getElementById('logo_image').src = "sun_logo.png";
+        document.getElementById('profile').src = "profile2.jpg";
+    }
+}
+
+function toggleTheme(){
+    var theme = document.getElementsByTagName('link')[0];
+    if(theme.getAttribute('href') == 'styles.css'){
+        localStorage.setItem("currentTheme", "sun.css");
+        load_style();
+    }
+    else{
+        localStorage.setItem("currentTheme", "styles.css");
+        load_style();
+        
+    }
+   
+}
+
+/*let curStyleSheet = localStorage.getItem('curStyleSheet');
 
 const toggleTheme = () => {
     var theme = document.getElementsByTagName('link')[0];
@@ -14,7 +67,7 @@ const toggleTheme = () => {
         document.getElementById('profile').src = "profile.jpg";
     }
 }
-
+*/
 
 /*
 function toggleTheme(){
